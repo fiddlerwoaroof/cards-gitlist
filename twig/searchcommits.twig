@@ -2,10 +2,12 @@
 
 {% set page = 'searchcommits' %}
 
-{% block title %}GitList{% endblock %}
+{% block title %}
+  GitList
+{% endblock %}
 
 {% block content %}
-    {% include 'breadcrumb.twig' with {breadcrumbs: [{dir: 'Commits search results for: ' ~ query, path:''}]} %}
+  {% include 'breadcrumb.twig' with {breadcrumbs: [{dir: 'Commits search results for: ' ~ query, path:''}]} %}
 
-    {% include 'commits_list.twig' %}
+  {% include 'commits_list.twig' %}
 {% endblock %}

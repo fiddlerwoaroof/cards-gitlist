@@ -2,10 +2,12 @@
 
 {% set page = 'commits' %}
 
-{% block title %}GitList{% endblock %}
+{% block title %}
+  GitList
+{% endblock %}
 
 {% block content %}
-    {% include 'breadcrumb.twig' with {breadcrumbs: [{dir: 'Commit history', path:''}]} %}
+  {% include 'breadcrumb.twig' with {breadcrumbs: [{dir: 'Commit history', path:''}]} %}
 
-    {% include 'commits_list.twig' %}
+  {% include 'commits_list.twig' %}
 {% endblock %}

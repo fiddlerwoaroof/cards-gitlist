@@ -1,36 +1,40 @@
 {% extends 'layout.twig' %}
-{% block title %}git.fiddlerwoaroof.com{% endblock %}
+{% block title %}
+  git.fiddlerwoaroof.com
+{% endblock %}
 
 {% block body %}
 
-<div id="repositories">
+  <div id="repositories">
 
 
-  {% include 'navigation.twig' %}
+    {% include 'navigation.twig' %}
 
-  <div class="search">
-    <input class="search" placeholder="search" autofocus>
+    <div class="search">
+      <input class="search" placeholder="search" autofocus>
+    </div>
+
+    <main>
+    <div class="list repository-list">
+      {% for repository in repositories %}
+        <a class="repository" href="{{ path('repository', {repo: repository.name}) }}">
+          <div>
+            <div class="repository-header">
+              <i class="icon-folder-open icon-spaced"></i>
+              <span class="name">{{ repository.name }}</span>
+            </div>
+            {% if repository.description %}
+              <div class="repository-body">
+                <p>{{ repository.description }}</p>
+              </div>
+            {% endif %}
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+    </main>
+    {% include 'footer.twig' %}
+
+
   </div>
-
-  <div class="list repository-list">
-    {% for repository in repositories %}
-    <a class="repository" href="{{ path('repository', {repo: repository.name}) }}">
-      <div>
-        <div class="repository-header">
-          <i class="icon-folder-open icon-spaced"></i>
-          <span class="name">{{ repository.name }}</span>
-        </div>
-        {% if repository.description %}
-        <div class="repository-body">
-          <p>{{ repository.description }}</p>
-        </div>
-        {% endif %}
-      </div>
-    </a>
-    {% endfor %}
-  </div>
-  {% include 'footer.twig' %}
-
-
-</div>
 {% endblock %}

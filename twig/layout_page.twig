@@ -2,33 +2,33 @@
 
 {% block body %}
 
-<div class="page-container">
-  {% include 'navigation.twig' %}
+  <div class="page-container">
+    {% include 'navigation.twig' %}
 
-  <!--<div></div>-->
-  <main>
-  {% if page in ['commits', 'searchcommits'] %}
-  <form class="form-search pull-right" action="{{ app.request.basepath }}/{{repo}}/commits/{{branch}}/search" method="POST">
-    <input type="text" name="query" class="input-medium search-query" placeholder="Search commits..." value="{{ query | default("") }}">
-  </form>
-  {% else %}
-  <form class="form-search pull-right" action="{{ app.request.basepath }}/{{repo}}/tree/{{branch}}/search" method="POST">
-    <input type="text" name="query" class="input-medium search-query" placeholder="Search tree..." value="{{ query | default("") }}">
-  </form>
-  {% endif %}
+    <!--<div></div>-->
+    <main>
+    {% if page in ['commits', 'searchcommits'] %}
+      <form class="form-search pull-right" action="{{ app.request.basepath }}/{{repo}}/commits/{{branch}}/search" method="POST">
+        <input type="text" name="query" class="input-medium search-query" placeholder="Search commits..." value="{{ query | default("") }}">
+      </form>
+    {% else %}
+      <form class="form-search pull-right" action="{{ app.request.basepath }}/{{repo}}/tree/{{branch}}/search" method="POST">
+        <input type="text" name="query" class="input-medium search-query" placeholder="Search tree..." value="{{ query | default("") }}">
+      </form>
+    {% endif %}
 
-  {% if branches is defined %}
-  {% include 'branch_menu.twig' %}
-  {% endif %}
+    {% if branches is defined %}
+      {% include 'branch_menu.twig' %}
+    {% endif %}
 
-  {% include 'menu.twig' %}
+    {% include 'menu.twig' %}
 
-  {% block content %}{% endblock %}
-  </main>
+    {% block content %}{% endblock %}
+      </main>
 
-  {% include 'footer.twig' %}
+      {% include 'footer.twig' %}
 
-</div>
+  </div>
 
-</div></div>
-{% endblock %}
+  </div></div>
+    {% endblock %}
