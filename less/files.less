@@ -12,6 +12,46 @@ ul.breadcrumb {
   float: left;
 }
 
+.page-container, #repositories {
+  grid-template-rows: 4em 9fr 1fr;
+  grid-template-columns: 2fr 9fr;
+  display: grid;
+  height: 100vh;
+  width: 100%;
+
+  main {
+    overflow: auto;
+    padding: 12px;
+    grid-area: main;
+  }
+}
+
+.page-container {
+  grid-template-areas: "nav  main"
+                       "nav  main"
+                       "foot main";
+}
+
+#repositories {
+  grid-template-areas: "nav  head"
+                       "nav  main"
+                       "foot main";
+}
+
+.fwoar-nav {
+  grid-area: nav;
+
+  padding-top: 12px;
+  padding-left: 12px;
+  .brand {
+    font-weight: bolder;
+    display: block;
+    text-align: center;
+    margin-bottom: 2em;
+    padding: 1rem;
+  }
+}
+
 @media screen and (max-width: 1499px) {
   :root {
     --no-cols: 3;
@@ -29,7 +69,35 @@ ul.breadcrumb {
   :root {
     --no-cols: 1;
   }
+
+  .page-container, #repositories {
+    grid-template-areas: "nav  nav"
+                         "head head"
+                         "main main"
+                         "foot foot"
+                         ;
+    grid-template-rows: 8rem 6.5rem 1fr 3.2em;
+    height: auto;
+  }
+
+  .fwoar-nav {
+    ul { display: flex; justify-content: space-around; }
+  }
+
+  .repository-list {
+    overflow-y: visible;
+  }
 }
+
+div.search {
+  grid-area: head;
+}
+
+footer {
+  padding: 1em;
+  grid-area: foot;
+}
+
 
 * { box-sizing: border-box; }
 
@@ -46,31 +114,13 @@ div.source-view .source-header {
   display: block;
 }
 
-.page-container, #repositories {
-  display: grid;
-  grid-template-columns: 2fr 9fr;
-  grid-template-rows: 1fr 9fr 1fr;
-  height: 100vh;
-  width: 100%;
-
-  main {
-    padding: 12px;
-    grid-row-end: span 3;
-  }
-}
 
 .page-container main {
   overflow-y: auto;
 }
 
-footer {
-  padding: 1em;
-  grid-column: 1;
-  grid-row: 3;
-}
 
 div.search {
-  grid-column: 2;
   padding: 12px;
   position: relative;
   input {
@@ -85,30 +135,14 @@ div.search {
   }
 }
 
-.fwoar-nav {
-  grid-column: 1;
-  grid-row: 1 / span 2;
-  padding-top: 12px;
-  padding-left: 12px;
-  .brand {
-    font-weight: bolder;
-    display: block;
-    margin-bottom: 2em;
-    padding: 1rem;
-  }
-}
-
 .repository-list {
-    overflow-y: scroll;
-    grid-row-end: span 2;
-    padding: 12px 12px;
+  grid-row-end: span 2;
+  padding: 12px 12px;
 
-  grid-column: 2;
   display: grid;
   grid-template-columns: repeat(var(--no-cols), 1fr);
   justify-content: space-between;
   grid-gap: 10px 14px;
-  grid-auto-rows: 1fr;
 }
 
 .source-view {
@@ -146,7 +180,7 @@ div.search {
     height:600pt;
   }
   .source-diff {
-    background-color: lighten(@bodyBackground, 10%);
+    background-color: @bodyBackgroundLight;
     pre {
       margin: 0;
       padding: 0 0 0 6pt;
@@ -154,7 +188,7 @@ div.search {
       .border-radius(0);
 
       &:hover {
-        background-color: lighten(@bodyBackground, 10%);
+        background-color: @bodyBackgroundLight;
       }
     }
     table td {
@@ -167,12 +201,12 @@ div.search {
       background-color: hsl(0, 50%, 10%);
     }
     .chunk {
-      background-color:lighten(@bodyBackground, 5%);
+      background-color: @bodyBackgroundLight;
       color:@grayLighter;
     }
     .lineNo {
       color: #aaa;
-      background-color: lighten(@bodyBackground, 15%);
+      background-color: @bodyBackgroundLight;
       padding: 0 6pt;
       text-align: right;
       border-right: 1pt solid @grayDarker;
@@ -187,7 +221,7 @@ div.search {
 
 .blame-view {
   width: 100%;
-  background-color: lighten(@bodyBackground, 10%);
+  background-color: @bodyBackgroundLight;
   td {
   vertical-align:top;
   padding:8pt;
