@@ -1,0 +1,37 @@
+// Scaffolding
+// Basic and global styles for generating a grid system, structural layout, and page templates
+// -------------------------------------------------------------------------------------------
+
+
+// Body reset
+// ----------
+
+body {/*
+  transform: scale(0.9);
+  outline: thin solid;
+*/}
+
+body {
+  overscroll-behavior: none;
+  margin: 0;
+  overflow-y: auto;
+  font-family: @baseFontFamily;
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+  color: @textColor;
+  background-color: @bodyBackground;
+  /*padding-bottom: 40pt;*/
+}
+
+
+// Links
+// -----
+
+a {
+  color: @linkColor;
+  text-decoration: none;
+}
+a:hover {
+  color: @linkColorHover;
+  text-decoration: underline;
+}

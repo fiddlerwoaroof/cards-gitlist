@@ -1,0 +1,58 @@
+// ALERT STYLES
+// ------------
+
+// Base alert styles
+.alert {
+  padding: 8pt 35pt 8pt 14pt;
+  margin-bottom: @baseLineHeight;
+  text-shadow: 0 1pt 0 rgba(255,255,255,.5);
+  background-color: @warningBackground;
+  border: 1pt solid @warningBorder;
+  .border-radius(4pt);
+  color: @warningText;
+}
+.alert-heading {
+  color: inherit;
+}
+
+// Adjust close link position
+.alert .close {
+  position: relative;
+  top: -2pt;
+  right: -21pt;
+  line-height: 18pt;
+}
+
+// Alternate styles
+// ----------------
+
+.alert-success {
+  background-color: @successBackground;
+  border-color: @successBorder;  
+  color: @successText;
+}
+.alert-danger,
+.alert-error {
+  background-color: @errorBackground;
+  border-color: @errorBorder;
+  color: @errorText;
+}
+.alert-info {
+  background-color: @infoBackground;
+  border-color: @infoBorder;
+  color: @infoText;
+}
+
+// Block alerts
+// ------------------------
+.alert-block {
+  padding-top: 14pt;
+  padding-bottom: 14pt;
+}
+.alert-block > p,
+.alert-block > ul {
+  margin-bottom: 0;
+}
+.alert-block p + p {
+  margin-top: 5pt;
+}

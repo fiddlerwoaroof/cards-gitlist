@@ -1,0 +1,49 @@
+// POPOVERS
+// --------
+
+.popover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: @zindexPopover;
+  display: none;
+  padding: 5pt;
+  &.top    { margin-top:  -5pt; }
+  &.right  { margin-left:  5pt; }
+  &.bottom { margin-top:   5pt; }
+  &.left   { margin-left: -5pt; }
+  &.top .arrow    { #popoverArrow > .top(); }
+  &.right .arrow  { #popoverArrow > .right(); }
+  &.bottom .arrow { #popoverArrow > .bottom(); }
+  &.left .arrow   { #popoverArrow > .left();  }
+  .arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+}
+.popover-inner {
+  padding: 3pt;
+  width: 280pt;
+  overflow: hidden;
+  background: @black; // has to be full background declaration for IE fallback
+  background: rgba(0,0,0,.8);
+  .border-radius(6pt);
+  .box-shadow(0 3pt 7pt rgba(0,0,0,0.3));
+}
+.popover-title {
+  padding: 9pt 15pt;
+  line-height: 1;
+  background-color: #f5f5f5;
+  border-bottom:1pt solid #eee;
+  .border-radius(3pt 3pt 0 0);
+}
+.popover-content {
+  padding: 14pt;
+  background-color: @white;
+  .border-radius(0 0 3pt 3pt);
+  .background-clip(padding-box);
+  p, ul, ol {
+    margin-bottom: 0;
+  }
+}
