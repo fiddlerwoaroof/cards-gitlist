@@ -30,7 +30,7 @@
       {% endfor %}
       {% for repository in repositories %}
         {% if not repository.description %}
-          <a class="repository" href="{{ path('repository', {repo: repository.name}) }}">
+          <a class="repository" href="{{ path('repository', {repo: repository.name}) }}" style="display:none">
             <div>
               <div class="repository-header">
                 <i class="icon-folder-open icon-spaced"></i>
