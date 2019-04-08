@@ -61,7 +61,7 @@
     <script src="{{ app.request.basepath }}/themes/{{ app.theme }}/js/main.js"></script>
     <script src="{{ app.request.basepath }}/themes/{{ app.theme }}/js/networkGraph.js"></script>
     <script type="text/javascript">
-      animateCSSGrid.wrapGrid(document.querySelector("#repositories, .page-container"));
+      window.gridProps = animateCSSGrid.wrapGrid(document.querySelector("#repositories, .page-container"));
       if (window.flip !== undefined && window.location.hash === "#light") {
         console.log('let it be light!');
         flip();
