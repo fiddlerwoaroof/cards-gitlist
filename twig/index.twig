@@ -6,10 +6,7 @@
 {% block body %}
 
   <div id="repositories">
-
-
     {% include 'navigation.twig' %}
-
     <div class="search">
       <input class="search" placeholder="search" autofocus>
     </div>
@@ -18,29 +15,29 @@
     <div class="list repository-list">
       {% for repository in repositories %}
         {% if repository.description %}
-        <a class="repository" href="{{ path('repository', {repo: repository.name}) }}">
-          <div>
-            <div class="repository-header">
-              <i class="icon-folder-open icon-spaced"></i>
-              <span class="name">{{ repository.name }}</span>
+          <a class="repository" href="{{ path('repository', {repo: repository.name}) }}">
+            <div>
+              <div class="repository-header">
+                <i class="icon-folder-open icon-spaced"></i>
+                <span class="name">{{ repository.name }}</span>
+              </div>
+              <div class="repository-body">
+                <p>{{ repository.description }}</p>
+              </div>
             </div>
-            <div class="repository-body">
-              <p>{{ repository.description }}</p>
-            </div>
-          </div>
-        </a>
+          </a>
         {% endif %}
       {% endfor %}
       {% for repository in repositories %}
         {% if not repository.description %}
-        <a class="repository" href="{{ path('repository', {repo: repository.name}) }}">
-          <div>
-            <div class="repository-header">
-              <i class="icon-folder-open icon-spaced"></i>
-              <span class="name">{{ repository.name }}</span>
+          <a class="repository" href="{{ path('repository', {repo: repository.name}) }}">
+            <div>
+              <div class="repository-header">
+                <i class="icon-folder-open icon-spaced"></i>
+                <span class="name">{{ repository.name }}</span>
+              </div>
             </div>
-          </div>
-        </a>
+          </a>
         {% endif %}
       {% endfor %}
     </div>
