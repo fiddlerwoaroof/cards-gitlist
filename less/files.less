@@ -1,257 +1,354 @@
 :root {
-  --no-cols: 4;
+    --no-cols: 5;
 }
 
 ul.breadcrumb {
-  padding: 0;
-  margin: 0;
-  box-shadow: none;
-  border: none;
-  background: none;
-  display: block;
-  float: left;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+    border: none;
+    background: none;
+    display: block;
+    float: left;
 }
 
 .page-container, #repositories {
-  grid-template-rows: 4em 9fr 1fr;
-  grid-template-columns: 2fr 9fr;
-  display: grid;
-  height: 100vh;
-  width: 100%;
+    grid-template-rows: 4em 9fr 1fr;
+    grid-template-columns: 2fr 9fr;
+    display: grid;
+    height: 100vh;
+    width: 100%;
 
-  main {
-    overflow: auto;
-    padding: 12px;
-    grid-area: main;
-  }
+    main {
+        overflow: auto;
+        padding: 12px;
+        grid-area: main;
+    }
 }
 
 .page-container {
-  grid-template-areas: "nav  main"
-                       "nav  main"
-                       "foot main";
+    grid-template-areas: "nav  main"
+                             "nav  main"
+                             "foot main";
 }
 
 #repositories {
-  grid-template-areas: "nav  head"
-                       "nav  main"
-                       "foot main";
+    grid-template-areas: "nav  head"
+                             "nav  main"
+                             "foot main";
 }
 
 .fwoar-nav {
-  grid-area: nav;
+    grid-area: nav;
 
-  padding-top: 12px;
-  padding-left: 12px;
-  .brand {
-    font-weight: bolder;
-    display: block;
-    text-align: center;
-    margin-bottom: 2em;
-    padding: 1rem;
-  }
+    padding-top: 12px;
+    padding-left: 12px;
+    .brand {
+        font-weight: bolder;
+        display: block;
+        text-align: center;
+        margin-bottom: 2em;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 1919px) {
+    :root {
+        --no-cols: 4;
+    }
 }
 
 @media screen and (max-width: 1499px) {
-  :root {
-    --no-cols: 3;
-  }
+    :root {
+        --no-cols: 3;
+    }
 }
 
 @media screen and (max-width: 1024px) {
-  :root {
-    --no-cols: 2;
-  }
+    :root {
+        --no-cols: 2;
+    }
 }
 
 
 @media screen and (max-width: 768px) {
-  :root {
-    --no-cols: 1;
-  }
+    :root {
+        --no-cols: 1;
+    }
 
-  .page-container, #repositories {
-    grid-template-areas: "nav  nav"
-                         "head head"
-                         "main main"
-                         "foot foot"
-                         ;
-    grid-template-rows: 8rem 6.5rem 1fr 3.2em;
-    height: auto;
-  }
+    .page-container, #repositories {
+        grid-template-areas: "nav  nav"
+                                 "head head"
+                                 "main main"
+                                 "foot foot"
+        ;
+        grid-template-rows: 8rem 6.5rem 1fr 3.2em;
+        height: auto;
+    }
 
-  .fwoar-nav {
-    ul { display: flex; justify-content: space-around; }
-  }
+    .fwoar-nav {
+        ul { display: flex; justify-content: space-around; }
+    }
 
-  .repository-list {
-    overflow-y: visible;
-  }
+    .repository-list {
+        overflow-y: visible;
+    }
 }
 
 div.search {
-  grid-area: head;
+    grid-area: head;
 }
 
 footer {
-  padding: 1em;
-  grid-area: foot;
+    padding: 1em;
+    grid-area: foot;
 }
 
 
 * { box-sizing: border-box; }
 
 div.source-view .source-header {
-  height: auto;
-  padding-top: 0;
-  padding-right: 0;
+    height: auto;
+    padding-top: 0;
+    padding-right: 0;
 }
 
 .source-header::after {
-  float: none;
-  clear: both;
-  content: " ";
-  display: block;
+    float: none;
+    clear: both;
+    content: " ";
+    display: block;
 }
 
 
 .page-container main {
-  overflow-y: auto;
+    overflow-y: auto;
 }
 
 
 div.search {
-  padding: 12px;
-  position: relative;
-  input {
-    margin: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    bottom: 12px;
-    left: 12px;
-    width: calc(100% - 40px);
-    height: 2.5em;
-  }
+    padding: 12px;
+    position: relative;
+    input {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: 12px;
+        left: 12px;
+        width: calc(100% - 40px);
+        height: 2.5em;
+    }
 }
 
 .repository-list {
-  grid-row-end: span 2;
-  padding: 12px 12px;
+    grid-row-end: span 2;
+    padding: 12px 12px;
 
-  display: grid;
-  grid-template-columns: repeat(var(--no-cols), 1fr);
-  justify-content: space-between;
-  grid-gap: 10px 14px;
+    display: grid;
+    grid-template-columns: repeat(var(--no-cols), 1fr);
+    justify-content: space-between;
+    grid-gap: 10px 14px;
 }
 
 .source-view {
-  width: 100%;
-  margin-bottom: @baseLineHeight;
-  border: 1pt solid @treeHeaderBorder;
+    width: 100%;
+    margin-bottom: @baseLineHeight;
+    border: 1pt solid @treeHeaderBorder;
 
-  .source-header {
-    padding: 8pt;
-    line-height: @baseLineHeight;
-    text-align: left;
-    vertical-align: bottom;
-    /*(#gradient > .vertical(@treeHeaderHighlight, @treeHeader);*/
-    border-bottom: 1pt solid @treeHeaderBorder;
-    font-weight: bold;
-    color: @white;
-    text-shadow: 1pt 1pt 1pt hsla(0,0%,0%,1);
-    height:28pt;
-    .meta {
-      float: left;
-      padding: 4pt 0;
-      font-size: 14pt;
+    .source-header {
+        padding: 8pt;
+        line-height: @baseLineHeight;
+        text-align: left;
+        vertical-align: bottom;
+        /*(#gradient > .vertical(@treeHeaderHighlight, @treeHeader);*/
+        border-bottom: 1pt solid @treeHeaderBorder;
+        font-weight: bold;
+        color: @white;
+        text-shadow: 1pt 1pt 1pt hsla(0,0%,0%,1);
+        height:28pt;
+        .meta {
+            float: left;
+            padding: 4pt 0;
+            font-size: 14pt;
+        }
     }
-  }
-  pre {
-    margin: 0;
-    padding: 12pt;
-    border: none;
-  }
-  #sourcecode {
-    margin: 0;
-    padding: 0;
-    border: none;
-    width:100%;
-    height:600pt;
-  }
-  .source-diff {
-    background-color: @bodyBackgroundLight;
     pre {
-      margin: 0;
-      padding: 0 0 0 6pt;
-      border: none;
-      .border-radius(0);
-
-      &:hover {
+        margin: 0;
+        padding: 12pt;
+        border: none;
+    }
+    #sourcecode {
+        margin: 0;
+        padding: 0;
+        border: none;
+        width:100%;
+        height:600pt;
+    }
+    .source-diff {
         background-color: @bodyBackgroundLight;
-      }
+        pre {
+            margin: 0;
+            padding: 0 0 0 6pt;
+            border: none;
+            .border-radius(0);
+
+            &:hover {
+                background-color: @bodyBackgroundLight;
+            }
+        }
+        table td {
+            padding: 0pt;
+        }
+        .new {
+            background-color: hsl(127, 50%, 10%);
+        }
+        .old {
+            background-color: hsl(0, 50%, 10%);
+        }
+        .chunk {
+            background-color: @bodyBackgroundLight;
+            color:@grayLighter;
+        }
+        .lineNo {
+            color: #aaa;
+            background-color: @bodyBackgroundLight;
+            padding: 0 6pt;
+            text-align: right;
+            border-right: 1pt solid @grayDarker;
+            font-family: monospace;
+        }
     }
-    table td {
-      padding: 0pt;
+    .image-blob {
+        padding:10pt;
+        max-width: 600pt;
     }
-    .new {
-      background-color: hsl(127, 50%, 10%);
-    }
-    .old {
-      background-color: hsl(0, 50%, 10%);
-    }
-    .chunk {
-      background-color: @bodyBackgroundLight;
-      color:@grayLighter;
-    }
-    .lineNo {
-      color: #aaa;
-      background-color: @bodyBackgroundLight;
-      padding: 0 6pt;
-      text-align: right;
-      border-right: 1pt solid @grayDarker;
-      font-family: monospace;
-    }
-  }
-  .image-blob {
-    padding:10pt;
-    max-width: 600pt;
-  }
 }
 
 .blame-view {
-  width: 100%;
-  background-color: @bodyBackgroundLight;
-  td {
-  vertical-align:top;
-  padding:8pt;
-  }
-  tr {
-  border-bottom:1pt solid @grayDarker;
-  }
-  tr:last-child {border-bottom:0}
-  .line {
-  font-weight:700;
-  border-right:1pt solid @grayDarker;
-  }
-  .commit {
-  font-weight:700;
-  border-right:1pt solid @grayDarker;
-  }
-  pre {
-    margin:0;
-    padding:0;
-    border:none;
-    .border-radius(0);
-  }
+    width: 100%;
+    background-color: @bodyBackgroundLight;
+    td {
+        vertical-align:top;
+        padding:8pt;
+    }
+    tr {
+        border-bottom:1pt solid @grayDarker;
+    }
+    tr:last-child {border-bottom:0}
+    .line {
+        font-weight:700;
+        border-right:1pt solid @grayDarker;
+    }
+    .commit {
+        font-weight:700;
+        border-right:1pt solid @grayDarker;
+    }
+    pre {
+        margin:0;
+        padding:0;
+        border:none;
+        .border-radius(0);
+    }
 }
 
 .commit-view {
-  width: 100%;
-  margin-bottom: @baseLineHeight;
-  border: 1pt solid @treeHeaderBorder;
-  .border-radius(4pt);
-  .commit-header {
+    width: 100%;
+    margin-bottom: @baseLineHeight;
+    border: 1pt solid @treeHeaderBorder;
+    .border-radius(4pt);
+    .commit-header {
+        padding: 8pt;
+        line-height: @baseLineHeight;
+        text-align: left;
+        vertical-align: bottom;
+        /*#gradient > .vertical(@treeHeaderHighlight, @treeHeader);*/
+        border-bottom: 1pt solid @grayDarker;
+        font-weight: bold;
+        text-shadow: 1pt 1pt 1pt hsla(0,0%,0%,1);
+        h4 {
+            padding: 4pt 0;
+        }
+    }
+    .commit-body {
+        padding: 8pt;
+    }
+}
+
+.commit-list {
+    list-style-type:none;
+    li {
+        padding:8pt 5pt 8pt 5pt;
+        font-size:14pt;
+        font-weight: 700;
+        border-bottom: 1pt solid @grayDarker;
+        overflow: hidden;
+        .meta {
+            font-weight: normal;
+            font-size: 14pt;
+            color: @grayLight;
+        }
+    }
+    li:last-child {border-bottom:0;margin-bottom:25pt;}
+}
+
+.repository:hover {
+    text-decoration: none;
+    border-color: @linkColorHover;
+}
+
+.repository {
+    border-radius: 5px;
+    transition: border-color ease 0.5s;
+    box-sizing: border-box;
+    border: 2pt solid @grayDarker;
+    background: #3f3f3f;
+    padding: 1em;
+
+    .ltr-border {
+        border-bottom: none;
+        position: relative;
+        top: 2pt;
+        padding-top: 8pt;
+        padding-right: 12pt;
+        padding-bottom: 5.75pt;
+        padding-left: 4pt;
+        margin-left: -4pt;
+        margin-bottom: -6pt;
+        z-index: 999;
+    }
+
+    .repository-header {
+        text-shadow: 1pt 1pt 1pt hsl(0,0%,23%,1);
+        padding: 4pt;
+        font-weight: 700;
+        font-size:12pt;
+    }
+
+    .repository-body {
+        font-size: 10pt;
+        font-weight: 300;
+        padding: 4pt;
+        padding-left: 16pt;
+        /*border: 2pt solid lighten(@treeHeaderBorder, 5%);*/
+        border-top: none;
+        p {
+            font-size: 10pt;
+            margin: 0;
+        }
+    }
+}
+
+.readme-view {
+    border: 1pt solid @treeHeaderBorder;
+}
+
+.md-view {
+    width: 100%;
+    margin-bottom: @baseLineHeight;
+}
+
+.md-header {
     padding: 8pt;
     line-height: @baseLineHeight;
     text-align: left;
@@ -259,108 +356,17 @@ div.search {
     /*#gradient > .vertical(@treeHeaderHighlight, @treeHeader);*/
     border-bottom: 1pt solid @grayDarker;
     font-weight: bold;
+    color: @white;
     text-shadow: 1pt 1pt 1pt hsla(0,0%,0%,1);
-    h4 {
-    padding: 4pt 0;
-    }
-  }
-  .commit-body {
-    padding: 8pt;
-  }
-}
-
-.commit-list {
-  list-style-type:none;
-  li {
-    padding:8pt 5pt 8pt 5pt;
-    font-size:14pt;
-    font-weight: 700;
-    border-bottom: 1pt solid @grayDarker;
-    overflow: hidden;
+    height:28pt;
     .meta {
-      font-weight: normal;
-      font-size: 14pt;
-      color: @grayLight;
+        float: left;
+        padding: 4pt 0;
+        font-size: 14pt;
     }
-  }
-  li:last-child {border-bottom:0;margin-bottom:25pt;}
-}
-
-.repository:hover {
-  text-decoration: none;
-  border-color: @linkColorHover;
-}
-
-.repository {
-  border-radius: 5px;
-  transition: border-color ease 0.5s;
-  box-sizing: border-box;
-  border: 2pt solid @grayDarker;
-  background: #3f3f3f;
-  padding: 1em;
-
-  .ltr-border {
-     border-bottom: none;
-     position: relative;
-     top: 2pt;
-     padding-top: 8pt;
-     padding-right: 12pt;
-     padding-bottom: 5.75pt;
-     padding-left: 4pt;
-     margin-left: -4pt;
-     margin-bottom: -6pt;
-     z-index: 999;
-  }
-
-  .repository-header {
-    text-shadow: 1pt 1pt 1pt hsl(0,0%,23%,1);
-    padding: 4pt;
-    font-weight: 700;
-    font-size:12pt;
-  }
-
-  .repository-body {
-    font-size: 10pt;
-    font-weight: 300;
-    padding: 4pt;
-    padding-left: 16pt;
-    /*border: 2pt solid lighten(@treeHeaderBorder, 5%);*/
-    border-top: none;
-    p {
-      font-size: 10pt;
-      margin: 0;
-    }
-  }
-}
-
-.readme-view {
-  border: 1pt solid @treeHeaderBorder;
-}
-
-.md-view {
-  width: 100%;
-  margin-bottom: @baseLineHeight;
-}
-
-.md-header {
-  padding: 8pt;
-  line-height: @baseLineHeight;
-  text-align: left;
-  vertical-align: bottom;
-  /*#gradient > .vertical(@treeHeaderHighlight, @treeHeader);*/
-  border-bottom: 1pt solid @grayDarker;
-  font-weight: bold;
-  color: @white;
-  text-shadow: 1pt 1pt 1pt hsla(0,0%,0%,1);
-  height:28pt;
-  .meta {
-    float: left;
-    padding: 4pt 0;
-    font-size: 14pt;
-  }
 }
 
 #md-content {
-  padding: 30pt;
-  /*color: @black;*/
+    padding: 30pt;
+    /*color: @black;*/
 }
