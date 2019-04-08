@@ -32,7 +32,7 @@
         {% endif %}
       {% endfor %}
       {% for repository in repositories %}
-        {% if !repository.description %}
+        {% if not repository.description %}
         <a class="repository" href="{{ path('repository', {repo: repository.name}) }}">
           <div>
             <div class="repository-header">
