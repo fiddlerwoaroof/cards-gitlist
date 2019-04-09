@@ -95,7 +95,6 @@ input[type="button"] {
   overflow: visible;
   margin: 0;
   padding: 3px 10px;
-  text-shadow: white 0 1px 1px;
   text-decoration: none;
   vertical-align: top;
   width: auto;
@@ -279,7 +278,6 @@ select[size="1"] {
     font: 13px/17px "Lucida Grande", Arial, "Liberation Sans", FreeSans, sans-serif;
     overflow: hidden;
     padding: 15px 15px 17px;
-    text-shadow: black 0 0 1px;
     min-height: 16px;
   }
 
