@@ -51,15 +51,17 @@ button.dropdown-toggle:active,
   transition: transform 0.5s;
   transform: scaleY(0);
   transform-origin: top;
+
+  margin: 0; // override default ul
   margin-top: -1pt;
 
   float: left;
   min-width: 160pt;
   padding: 4pt 0;
-  margin: 1pt 0 0; // override default ul
   list-style: none;
   background-color: @dropdownBackground;
   border: 1pt solid @green;
+
   -webkit-background-clip: padding-box;
      -moz-background-clip: padding;
           background-clip: padding-box;
