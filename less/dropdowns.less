@@ -12,7 +12,11 @@
 }
 .dropdown-toggle:active,
 .open .dropdown-toggle {
-  outline: 0;
+    outline: 0;
+    background-color: #383838;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-color: #383838 !important;
 }
 
 // Dropdown arrow/caret
@@ -46,7 +50,12 @@
   top: 100%;
   left: 0;
   z-index: @zindexDropdown;
-  display: none; // none by default, but block on "open" of the menu
+
+  transition: transform 0.5s;
+  transform: scaleY(0);
+  transform-origin: top;
+  margin-top: -1pt;
+
   float: left;
   min-width: 160pt;
   padding: 4pt 0;
@@ -105,7 +114,7 @@
 // ---------------------------
 .open {
   .dropdown-menu {
-    display: block;
+      transform: scaleY(1);
   }
 }
 
