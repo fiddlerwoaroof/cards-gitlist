@@ -21,7 +21,6 @@
   border: 1pt solid @btnBorder;
   border-bottom-color: darken(@btnBorder, 10%);
   .border-radius(4pt);
-  .ie7-restore-left-whitespace(); // Give IE7 some love
   .box-shadow(~"inset 0 1pt 0 rgba(0,0,0,.2), 0 1pt 2pt rgba(255,255,255,.05)");
 }
 
@@ -30,7 +29,6 @@
   color: @zenburnFgDark;
   text-decoration: none;
   background-color: lighten(@black, 10%);
-  *background-color: lighten(@black, 15%); /* Buttons in IE7 don't get borders, so darken on hover */
   background-position: 0 -15pt;
 
   // transition is only when going to hover, otherwise the background

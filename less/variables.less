@@ -7,16 +7,27 @@
 // GLOBAL VALUES
 // --------------------------------------------------
 
+// Scaffolding
+// -------------------------
+@bodyBackgroundLight: #383838;
+@bodyBackground:      #2B2B2B;
+@bodyBackgroundDark:  #000;
+@zenburnFgLight:      #FFFFEF;
+@zenburnFg:           #DCDCCC;
+@zenburnFgDark:       #656555;
+
+@textColor:             @zenburnFg;
+
 
 // Grays
 // -------------------------
-@black:                 #000;
-@grayDarker:            #2B2B2B;
-@grayDark:              #383838;
+@black:                 @bodyBackgroundDark;
+@grayDarker:            @bodyBackground;
+@grayDark:              @grayDark;
 @gray:                  #3F3F3F;
 @grayLight:             #494949;
 @grayLighter:           #4F4F4F;
-@white:                 #ffff3f;
+@white:                 @zenburnFg;
 
 
 // Accent colors
@@ -30,17 +41,6 @@
 @pink:                  #DC8CC3;
 @purple:                #BDE0F3;
 
-
-// Scaffolding
-// -------------------------
-@bodyBackgroundLight:        @grayDark;
-@bodyBackground:        @grayDarker;
-@bodyBackgroundDark:        @black;
-@zenburnFgLight: #FFFFEF;
-@zenburnFg:       #DCDCCC;
-@zenburnFgDark: #656555;
-
-@textColor:             @zenburnFg;
 
 // Links
 // -------------------------
