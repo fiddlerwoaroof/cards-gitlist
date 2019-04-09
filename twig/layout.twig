@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86" />
 
     <title>{% block title %}Welcome!{% endblock %}</title>
-    <link rel="stylesheet" type="text/css" href="{{ app.request.basepath }}/themes/{{ app.theme }}/3dp/formalize.css" />
     <link rel="stylesheet" type="text/css" href="{{ app.request.basepath }}/themes/{{ app.theme }}/css/style.css?v=4" />
-
     <link rel="apple-touch-icon" sizes="57x57" href="{{app.request.basepath}}/themes/{app.theme}}/img/apple-touch-icon-57x57.png?v=wAAMKqR7RG" />
     <link rel="apple-touch-icon" sizes="60x60" href="{{app.request.basepath}}/themes/{app.theme}}/img/apple-touch-icon-60x60.png?v=wAAMKqR7RG" />
     <link rel="apple-touch-icon" sizes="72x72" href="{{app.request.basepath}}/themes/{app.theme}}/img/apple-touch-icon-72x72.png?v=wAAMKqR7RG" />
@@ -52,7 +50,6 @@
   <body>
     {% block body %}{% endblock %}
     <script src="{{ app.request.basepath }}/themes/{{ app.theme }}/js/jquery.js"></script>
-    <script src="{{ app.request.basepath }}/themes/{{ app.theme }}/3dp/jquery.formalize.js"></script>
     <script src="{{ app.request.basepath }}/themes/{{ app.theme }}/js/raphael.js"></script>
     <script src="{{ app.request.basepath }}/themes/{{ app.theme }}/js/bootstrap.js"></script>
     <script src="{{ app.request.basepath }}/themes/{{ app.theme }}/js/codemirror.js"></script>
