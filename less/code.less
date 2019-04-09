@@ -32,8 +32,7 @@ pre {
   white-space: pre;
   white-space: pre-wrap;
   background-color: lighten(@bodyBackground, 50%);
-  border: 1pt solid #ccc; // fallback for IE7-8
-  border: 1pt solid rgba(0,0,0,.15);
+  border: 1pt solid @bodyBackgroundDark;
   .border-radius(4pt);
 
   // Make prettyprint styles more spaced out for readability
