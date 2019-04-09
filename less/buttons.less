@@ -17,10 +17,12 @@
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
-  .buttonBackground(@btnBackground, @btnBackgroundHighlight);
+  background-color: @btnBackground;
   border: 1pt solid @btnBorder;
   border-bottom-color: darken(@btnBorder, 10%);
   .border-radius(4pt);
+
+  &:active { @btnBackgroundHighlight; }
 }
 
 // Hover state
@@ -121,25 +123,31 @@
     border-color: @bodyBackgroundLight;
 }
 .btn-primary {
-  .buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
+    background-color: @btnPrimaryBackground;
+    &:active {@btnPrimaryBackgroundHighlight;}
 }
 // Warning appears are orange
 .btn-warning {
-  .buttonBackground(@btnWarningBackground, @btnWarningBackgroundHighlight);
+    background-color: @btnWarningBackground;
+    &:active {@btnWarningBackgroundHighlight;}
 }
 // Danger and error appear as red
 .btn-danger {
-  .buttonBackground(@btnDangerBackground, @btnDangerBackgroundHighlight);
+    background-color: @btnDangerBackground;
+    &:active {@btnDangerBackgroundHighlight;}
 }
 // Success appears as green
 .btn-success {
-  .buttonBackground(@btnSuccessBackground, @btnSuccessBackgroundHighlight);
+    background-color: @btnSuccessBackground;
+    &:active {@btnSuccessBackgroundHighlight;}
 }
 // Info appears as a neutral blue
 .btn-info {
-  .buttonBackground(@btnInfoBackground, @btnInfoBackgroundHighlight);
+    background-color: @btnInfoBackground;
+    &:active {@btnInfoBackgroundHighlight;}
 }
 // Inverse appears as dark gray
 .btn-inverse {
-  .buttonBackground(@btnInverseBackground, @btnInverseBackgroundHighlight);
+    background-color: @btnInverseBackground;
+    &:active {@btnInverseBackgroundHighlight;}
 }
