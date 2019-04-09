@@ -26,37 +26,29 @@
 
 // Hover state
 .btn:hover {
-  color: @zenburnFgDark;
-  text-decoration: none;
-  background-color: lighten(@black, 10%);
-  background-position: 0 -15pt;
-
-  // transition is only when going to hover, otherwise the background
-  // behind the gradient (there for IE<=9 fallback) gets mismatched
-  .transition(background-position .1s linear);
+    color: @zenburnFgDark;
+    text-decoration: none;
+    background-color: @bodyBackgroundLight;
 }
 
 // Focus state for keyboard and accessibility
 .btn:focus {
-  .tab-focus();
+    .tab-focus();
 }
 
 // Active state
 .btn.active,
 .btn:active {
-  background-color: darken(@white, 10%);
-  background-color: darken(@white, 15%) e("\9");
-  background-image: none;
-  outline: 0;
+    background-color: @bodyBackgroundLight;
+    outline: 0;
 }
 
 // Disabled state
 .btn.disabled,
 .btn[disabled] {
-  cursor: default;
-  background-color: darken(@white, 10%);
-  background-image: none;
-  .opacity(65);
+    cursor: default;
+    background-color: @grayLighter;
+    .opacity(65);
 }
 
 
@@ -65,30 +57,30 @@
 
 // Large
 .btn-large {
-  padding: 9pt 14pt;
-  font-size: @baseFontSize + 2pt;
-  line-height: normal;
-  .border-radius(5pt);
+    padding: 9pt 14pt;
+    font-size: @baseFontSize + 2pt;
+    line-height: normal;
+    border-radius: 5pt;
 }
 .btn-large [class^="icon-"] {
-  margin-top: 1pt;
+    margin-top: 1pt;
 }
 
 // Small
 .btn-small {
-  padding: 5pt 9pt;
-  font-size: @baseFontSize - 2pt;
-  line-height: @baseLineHeight - 2pt;
+    padding: 5pt 9pt;
+    font-size: @baseFontSize - 2pt;
+    line-height: @baseLineHeight - 2pt;
 }
 .btn-small [class^="icon-"] {
-  margin-top: -1pt;
+    margin-top: -1pt;
 }
 
 // Mini
 .btn-mini {
-  padding: 2pt 6pt;
-  font-size: @baseFontSize - 2pt;
-  line-height: @baseLineHeight - 4pt;
+    padding: 2pt 6pt;
+    font-size: @baseFontSize - 2pt;
+    line-height: @baseLineHeight - 4pt;
 }
 
 
@@ -103,7 +95,7 @@
 .btn-success, .btn-success:hover,
 .btn-info, .btn-info:hover,
 .btn-inverse, .btn-inverse:hover {
-  color: @zenburnFg;
+    color: @zenburnFg;
 }
 // Provide *some* extra contrast for those who can get it
 .btn-primary.active,
@@ -112,13 +104,13 @@
 .btn-success.active,
 .btn-info.active,
 .btn-inverse.active {
-  color: zenburnFgLight;
+    color: @zenburnFgLight;
 }
 
 // Set the backgrounds
 // -------------------------
 .btn {
-  // reset here as of 2.0.3 due to Recess property order
+    // reset here as of 2.0.3 due to Recess property order
     border-color: @bodyBackgroundLight;
 }
 .btn-primary {
