@@ -105,8 +105,7 @@
 .btn-success, .btn-success:hover,
 .btn-info, .btn-info:hover,
 .btn-inverse, .btn-inverse:hover {
-  color: @white;
-  text-shadow: 0 -1pt 0 rgba(0,0,0,.25);
+  color: @zenburnFg;
 }
 // Provide *some* extra contrast for those who can get it
 .btn-primary.active,
@@ -115,7 +114,7 @@
 .btn-success.active,
 .btn-info.active,
 .btn-inverse.active {
-  color: rgba(255,255,255,.75);
+  color: zenburnFgLight;
 }
 
 // Set the backgrounds
@@ -146,34 +145,4 @@
 // Inverse appears as dark gray
 .btn-inverse {
   .buttonBackground(@btnInverseBackground, @btnInverseBackgroundHighlight);
-}
-
-
-// Cross-browser Jank
-// --------------------------------------------------
-
-button.btn,
-input[type="submit"].btn {
-
-  // Firefox 3.6 only I believe
-  &::-moz-focus-inner {
-    padding: 0;
-    border: 0;
-  }
-
-  // IE7 has some default padding on button controls
-  *padding-top: 2pt;
-  *padding-bottom: 2pt;
-  &.btn-large {
-    *padding-top: 7pt;
-    *padding-bottom: 7pt;
-  }
-  &.btn-small {
-    *padding-top: 3pt;
-    *padding-bottom: 3pt;
-  }
-  &.btn-mini {
-    *padding-top: 1pt;
-    *padding-bottom: 1pt;
-  }
 }
