@@ -98,11 +98,7 @@ input {
   *overflow: visible; // Inner spacing ie IE6/7
   line-height: normal; // FF3/4 have !important on line-height in UA stylesheet
 }
-button::-moz-focus-inner,
-input::-moz-focus-inner { // Inner padding and border oddities in FF3/4
-  padding: 0;
-  border: 0;
-}
+
 button,
 input[type="button"],
 input[type="reset"],
@@ -111,8 +107,6 @@ input[type="submit"] {
   -webkit-appearance: button; // Style clickable inputs in iOS
 }
 input[type="search"] { // Appearance in Safari/Chrome
-  -webkit-box-sizing: content-box;
-     -moz-box-sizing: content-box;
           box-sizing: content-box;
   -webkit-appearance: textfield;
 }
