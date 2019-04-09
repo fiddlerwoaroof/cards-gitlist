@@ -7,22 +7,21 @@
 
 // Core
 .btn {
-  display: inline-block;
-  .ie7-inline-block();
-  padding: 4pt 10pt 4pt;
-  margin-bottom: 0; // For input.btn
-  font-size: @baseFontSize;
-  line-height: @baseLineHeight;
-  color: @zenburnFg;
-  text-align: center;
-  vertical-align: middle;
-  cursor: pointer;
-  background-color: @btnBackground;
-  border: 1pt solid @btnBorder;
-  border-bottom-color: darken(@btnBorder, 10%);
-  .border-radius(4pt);
+    display: inline-block;
+    padding: 4pt 10pt 4pt;
+    margin-bottom: 0; // For input.btn
+    font-size: @baseFontSize;
+    line-height: @baseLineHeight;
+    color: @zenburnFg;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: @btnBackground;
+    border: 1pt solid @btnBorder;
+    border-bottom-color: darken(@btnBorder, 10%);
+    border-radius: 4pt;
 
-  &:active { @btnBackgroundHighlight; }
+    &:active { @btnBackgroundHighlight; }
 }
 
 // Hover state
