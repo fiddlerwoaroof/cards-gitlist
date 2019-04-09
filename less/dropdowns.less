@@ -53,12 +53,7 @@
   margin: 1pt 0 0; // override default ul
   list-style: none;
   background-color: @dropdownBackground;
-  border: 1pt solid #ccc;
-  border: 1pt solid rgba(0,0,0,.2);
-  *border-right-width: 2pt;
-  *border-bottom-width: 2pt;
-  .border-radius(5pt);
-  .box-shadow(0 5pt 10pt rgba(0,0,0,.2));
+  border: 1pt solid @green;
   -webkit-background-clip: padding-box;
      -moz-background-clip: padding;
           background-clip: padding-box;
@@ -109,10 +104,6 @@
 // Open state for the dropdown
 // ---------------------------
 .open {
-  // IE7's z-index only goes to the nearest positioned ancestor, which would
-  // make the menu appear below buttons that appeared later on the page
-  *z-index: @zindexDropdown;
-
   .dropdown-menu {
     display: block;
   }
@@ -123,31 +114,4 @@
 .pull-right .dropdown-menu {
   right: 0;
   left: auto;
-}
-
-// Allow for dropdowns to go bottom up (aka, dropup-menu)
-// ------------------------------------------------------
-// Just add .dropup after the standard .dropdown class and you're set, bro.
-// TODO: abstract this so that the navbar fixed styles are not placed here?
-.dropup,
-.navbar-fixed-bottom .dropdown {
-  // Reverse the caret
-  .caret {
-    border-top: 0;
-    border-bottom: 4pt solid @black;
-    content: "\2191";
-  }
-  // Different positioning for bottom up menu
-  .dropdown-menu {
-    top: auto;
-    bottom: 100%;
-    margin-bottom: 1pt;
-  }
-}
-
-// Typeahead
-// ---------
-.typeahead {
-  margin-top: 2pt; // give it some space to breathe
-  .border-radius(4pt);
 }
