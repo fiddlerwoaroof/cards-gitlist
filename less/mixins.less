@@ -172,7 +172,6 @@
     border-color: @borderColor;
     &:focus {
       border-color: darken(@borderColor, 10%);
-      .box-shadow(0 0 6pt lighten(@borderColor, 20%));
     }
   }
   // Give a small background color for input-prepend/-append
@@ -197,10 +196,6 @@
 }
 
 // Drop shadows
-.box-shadow(@shadow) {
-  -webkit-box-shadow: @shadow;
-     -moz-box-shadow: @shadow;
-          box-shadow: @shadow;
 }
 
 // Transitions
@@ -444,7 +439,6 @@
     *background-color: darken(@endColor, 5%);
   }
 
-  // IE 7 + 8 can't handle box-shadow to show active, so we darken a bit ourselves
   &:active,
   &.active {
     background-color: darken(@endColor, 10%) e("\9");
