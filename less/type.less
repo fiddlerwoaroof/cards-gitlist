@@ -13,7 +13,7 @@ p {
   line-height: @baseLineHeight;
   small {
     font-size: @baseFontSize - 2;
-    color: @grayLight;
+    color: @zenburnFg;
   }
 }
 .lead {
@@ -34,7 +34,7 @@ h1, h2, h3, h4, h5, h6 {
   text-rendering: optimizelegibility; // Fix the character spacing for headings
   small {
     font-weight: normal;
-    color: @grayLight;
+    color: @zenburnFg;
   }
 }
 h1 {
@@ -72,7 +72,7 @@ h5 {
 }
 h6 {
   font-size: 11pt;
-  color: @grayLight;
+  color: @zenburnFg;
   text-transform: uppercase;
 }
 
@@ -80,7 +80,7 @@ h6 {
 .page-header {
   padding-bottom: @baseLineHeight - 1;
   margin: @baseLineHeight 0;
-  border-bottom: 1pt solid @grayLighter;
+  border-bottom: 1pt solid @zenburnFg;
 }
 .page-header h1 {
   line-height: 1;
@@ -165,7 +165,7 @@ em {
   font-style: italic;
 }
 .muted {
-  color: @grayLight;
+  color: @zenburnFgDark;
 }
 
 // Abbreviations and acronyms
@@ -190,7 +190,7 @@ blockquote {
   small {
     display: block;
     line-height: @baseLineHeight;
-    color: @grayLight;
+    color: @zenburnFg;
     &:before {
       content: '\2014 \00A0';
     }
