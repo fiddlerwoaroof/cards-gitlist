@@ -13,15 +13,12 @@
   margin-bottom: 0; // For input.btn
   font-size: @baseFontSize;
   line-height: @baseLineHeight;
-  *line-height: 20pt;
-  color: @grayLight;
+  color: @zenburnFgLight;
   text-align: center;
-  text-shadow: 0 1pt 1pt hsla(0,0%,0%, 0.75);
   vertical-align: middle;
   cursor: pointer;
   .buttonBackground(@btnBackground, @btnBackgroundHighlight);
   border: 1pt solid @btnBorder;
-  *border: 0; // Remove the border to prevent IE7's black border on input:focus
   border-bottom-color: darken(@btnBorder, 10%);
   .border-radius(4pt);
   .ie7-restore-left-whitespace(); // Give IE7 some love
