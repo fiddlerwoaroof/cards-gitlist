@@ -5,13 +5,13 @@
 
 {% block body %}
 
-  <div id="repositories" tabindex="-1">
+  <div id="repositories">
     {% include 'navigation.twig' %}
     <div class="repo-search">
       <input class="search" placeholder="search" autofocus>
     </div>
 
-    <main>
+    <main tabindex="-1">
     <div class="list repository-list">
       {% for repository in repositories %}
         {% if repository.description %}
