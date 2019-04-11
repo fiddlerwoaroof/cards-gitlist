@@ -2,11 +2,11 @@
 
 {% block body %}
 
-  <div class="page-container">
+  <div class="page-container" tabindex="-1">
     {% include 'navigation.twig' %}
 
     <!--<div></div>-->
-    <main tabindex="-1">
+    <main>
     {% if page in ['commits', 'searchcommits'] %}
       <form class="form-search pull-right" action="{{ app.request.basepath }}/{{repo}}/commits/{{branch}}/search" method="POST">
         <input type="text" name="query" class="input-medium search-query" placeholder="Search commits..." value="{{ query | default("") }}">
