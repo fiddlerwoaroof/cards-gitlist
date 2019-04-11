@@ -5,15 +5,14 @@
 
 {% block body %}
 
-  <div id="repositories" tabindex="-1">
+  <div id="repositories">
     {% include 'navigation.twig' %}
     <div class="repo-search">
-      <input class="search" placeholder="search">
+      <input class="search" placeholder="search" autofocus>
     </div>
 
     <main>
-    <div class="list repository-list">
-      <input type="radio" tabindex="-1" autofocus style="overflow: hidden; float:left; display: block; height: 0; width: 0; margin: 0; padding: 0;position: relative; left: -100vw;"></input>
+    <div class="list repository-list" tabindex="0" autofocus>
       {% for repository in repositories %}
         {% if repository.description %}
           <a class="repository" href="{{ path('repository', {repo: repository.name}) }}">
