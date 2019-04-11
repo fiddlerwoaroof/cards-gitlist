@@ -7,7 +7,7 @@
 
     <!--<div></div>-->
     <main>
-      <input type="radio" tabindex="-1" autofocus style="overflow: hidden; display: block; height: 0; width: 0; margin: 0; padding: 0;position: relative; left: -100vw;"></input>
+      <input type="radio" tabindex="-1" autofocus style="overflow: hidden; float:left; display: block; height: 0; width: 0; margin: 0; padding: 0;position: relative; left: -100vw;"></input>
     {% if page in ['commits', 'searchcommits'] %}
       <form class="form-search pull-right" action="{{ app.request.basepath }}/{{repo}}/commits/{{branch}}/search" method="POST">
         <input type="text" name="query" class="input-medium search-query" placeholder="Search commits..." value="{{ query | default("") }}">
