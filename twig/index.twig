@@ -13,6 +13,7 @@
 
     <main>
     <div class="list repository-list">
+      <input type="radio" tabindex="-1" autofocus style="overflow: hidden; float:left; display: block; height: 0; width: 0; margin: 0; padding: 0;position: relative; left: -100vw;"></input>
       {% for repository in repositories %}
         {% if repository.description %}
           <a class="repository" href="{{ path('repository', {repo: repository.name}) }}">
