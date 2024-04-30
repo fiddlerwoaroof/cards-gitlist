@@ -57,14 +57,62 @@
     --zenburn-magenta: #DC8CC3;
 }
 
+@zenburnFgPlus2: #FFFFEF;
+@zenburnFgPlus1: #F5F5D6;
+@zenburnFg: #DCDCCC;
+@zenburnFg1: #A6A689;
+@zenburnFg2: #656555;
+@zenburnBlack: #000000;
+@zenburnBg2: #000000;
+@zenburnBg1: #111112;
+@zenburnBg05: #383838;
+@zenburnBg: #2A2B2E;
+@zenburnBgPlus05: #494949;
+@zenburnBgPlus1: #4F4F4F;
+@zenburnBgPlus2: #5F5F5F;
+@zenburnBgPlus3: #6F6F6F;
+@zenburnRedPlus2: #ECB3B3;
+@zenburnRedPlus1: #DCA3A3;
+@zenburnRed: #CC9393;
+@zenburnRed1: #BC8383;
+@zenburnRed2: #AC7373;
+@zenburnRed3: #9C6363;
+@zenburnRed4: #8C5353;
+@zenburnRed5: #7C4343;
+@zenburnRed6: #6C3333;
+@zenburnOrange: #DFAF8F;
+@zenburnYellow: #F0DFAF;
+@zenburnYellow1: #E0CF9F;
+@zenburnYellow2: #D0BF8F;
+@zenburnGreen5: #2F4F2F;
+@zenburnGreen4: #3F5F3F;
+@zenburnGreen3: #4F6F4F;
+@zenburnGreen2: #5F7F5F;
+@zenburnGreen1: #6F8F6F;
+@zenburnGreen: #7F9F7F;
+@zenburnGreenPlus1: #8FB28F;
+@zenburnGreenPlus2: #9FC59F;
+@zenburnGreenPlus3: #AFD8AF;
+@zenburnGreenPlus4: #BFEBBF;
+@zenburnCyan: #93E0E3;
+@zenburnBluePlus3: #BDE0F3;
+@zenburnBluePlus2: #ACE0E3;
+@zenburnBluePlus1: #94BFF3;
+@zenburnBlue: #8CD0D3;
+@zenburnBlue1: #7CB8BB;
+@zenburnBlue2: #6CA0A3;
+@zenburnBlue3: #5C888B;
+@zenburnBlue4: #4C7073;
+@zenburnBlue5: #366060;
+@zenburnMagenta: #DC8CC3;
+
 // Scaffolding
 // -------------------------
-@bodyBackgroundLight: var(--zenburn-bg-plus-1);
-@bodyBackground:      var(--zenburn-bg);
-@bodyBackgroundDark:  #000;
-@zenburnFgLight:      #FFFFEF;
-@zenburnFg:           #DCDCCC;
-@zenburnFgDark:       #656555;
+@bodyBackgroundLight: @zenburnBgPlus1;
+@bodyBackground:      @zenburnBg;
+@bodyBackgroundDark:  @zenburnBg1;
+@zenburnFgLight:      @zenburnFgPlus1;
+@zenburnFgDark:       @zenburnFg1;
 
 @textColor:             @zenburnFg;
 
@@ -73,10 +121,10 @@
 @black:                 @bodyBackgroundDark;
 @grayDarker:            @bodyBackground;
 @grayDark:              @bodyBackgroundLight;
-@gray:                  #3F3F3F;
-@grayLight:             #494949;
-@grayLighter:           #4F4F4F;
-@white:                 @zenburnFg;
+@gray:                  @zenburnBgPlus3;
+@grayLight:             @zenburnBgPlus2;
+@grayLighter:           @zenburnFg2;
+@white:                 @zenburnFgPlus1;
 
 // Accent colors
 // -------------------------
