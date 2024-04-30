@@ -1830,7 +1830,7 @@ button.dropdown-toggle:active,
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
-  background-color: #111112;
+  background-color: #000000;
   border: 1pt solid #2A2B2E;
   border-bottom-color: var(--zenburn-green-1);
   border-radius: 4pt;
