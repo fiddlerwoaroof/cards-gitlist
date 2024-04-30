@@ -1913,7 +1913,7 @@ button.dropdown-toggle:active,
   @btn PrimaryBackgroundHighlight;
 }
 .btn-warning {
-  background-color: #f0dacb;
+  background-color: #DFAF8F;
 }
 .btn-warning:active {
   @btn WarningBackgroundHighlight;
@@ -2019,13 +2019,13 @@ button.dropdown-toggle:active,
   background-color: #7caebb;
 }
 .btn-group.open .btn-warning.dropdown-toggle {
-  background-color: #DFAF8F;
+  background-color: #F0DFAF;
 }
 .btn-group.open .btn-danger.dropdown-toggle {
-  background-color: #b35f5f;
+  background-color: #DCA3A3;
 }
 .btn-group.open .btn-success.dropdown-toggle {
-  background-color: #abc0ab;
+  background-color: #8FB28F;
 }
 .btn-group.open .btn-info.dropdown-toggle {
   background-color: #8CD0D3;
