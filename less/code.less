@@ -16,8 +16,8 @@ pre {
 code {
   padding: 2pt 4pt;
   color: #d14;
-  background-color: lighten(@bodyBackground, 15%);
-  border: 1pt solid lighten(@bodyBackground, 10%);
+  background-color: @bodyBackgroundLight;
+  border: 1pt solid var(--zenburn-bg-plus-05);
 }
 
 // Blocks of code
@@ -31,7 +31,7 @@ pre {
   word-wrap: break-word;
   white-space: pre;
   white-space: pre-wrap;
-  background-color: lighten(@bodyBackground, 50%);
+  background-color: @bodyBackgroundLight;
   border: 1pt solid @bodyBackgroundDark;
   .border-radius(4pt);
 
