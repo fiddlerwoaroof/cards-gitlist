@@ -1134,7 +1134,7 @@ div.repo-search input {
   transition: border-color ease 0.5s;
   box-sizing: border-box;
   border: 2pt solid var(--zenburn-bg);
-  background: #3f3f3f;
+  background: var(--zenburn-bg-plus-1);
   padding: 1em;
 }
 .repository .ltr-border {
